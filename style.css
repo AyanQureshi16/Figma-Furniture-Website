@@ -1,0 +1,280 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+  overflow-x:hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.header{
+  background-image: url("./assets/Mask\ Group3.jpg");
+     background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;              
+}
+
+/* Header image */
+.header img {
+    width: 70%;
+  padding-top: 100px;
+  padding-right: 400px;
+  margin-left: 800px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  display: block;
+  
+}
+
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.feature-item i {
+  font-size: 30px;
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+/* Collection Section */
+.collection,
+.collection2,
+.collection3 {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.collection h2,
+.collection2 h1,
+.collection3 h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#para {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.card1{
+  background-image: url("./assets/Group\ 98.png");
+   background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh;              
+}
+.card1 img{
+  padding-left: 65%;
+}
+
+.ayan img,
+.card2 img,
+.card3 img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Mailing List */
+.message {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffe;
+}
+
+.message h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.message p {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.message img {
+  /* width: %; */
+  max-width: 700px;
+}
+
+/* Footer */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 20px;
+  margin-top: 30px;
+  background-color:rgb(0, 83, 111);
+  color: white;
+  flex-wrap: wrap;
+
+}
+
+.left-section,
+.right-section {
+  flex: 1 1 300px;
+}
+
+.left-section h2,
+.right-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  font-size: 14px;
+  color:white;
+}
+
+.follow-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.image-grid img {
+  border:2px solid rgb(0, 74, 99);
+  border-radius: 6px;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .collection h2,
+  .collection2 h1,
+  .collection3 h1 {
+    font-size: 26px;
+  }
+
+  #para,
+  .message p,
+  .left-section p {
+    font-size: 14px;
+  }
+
+  .follow-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item i {
+    font-size: 24px;
+  }
+
+  .header img,
+  .message img,
+  .ayan img,
+  .card1 img,
+  .card2 img,
+  .card3 img {
+    width: 100%;
+  }
+}
